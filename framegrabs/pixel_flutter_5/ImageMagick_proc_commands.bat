@@ -1,0 +1,9 @@
+"C:\Program Files\ImageMagick-7.0.8-Q16\mogrify.exe" -crop 1180x130+37+313 -path "C:\Users\Hao Ran Lee\Downloads\fui_homescreen\framegrabs\pixel_flutter_5\2_cropped" "C:\Users\Hao Ran Lee\Downloads\fui_homescreen\framegrabs\pixel_flutter_5\1_extract\*.bmp"
+
+for /f %f in ('dir /b "C:\Users\Hao Ran Lee\Downloads\fui_homescreen\framegrabs\pixel_flutter_5\2_cropped"') do "C:\Program Files\ImageMagick-7.0.8-Q16\convert.exe" "C:\Users\Hao Ran Lee\Downloads\fui_homescreen\framegrabs\pixel_flutter_5\2_cropped\%~nf.bmp" -alpha set -channel RGBA -fill none -fuzz 7% -opaque #000000 "C:\Users\Hao Ran Lee\Downloads\fui_homescreen\framegrabs\pixel_flutter_5\3_transparent\%~nf.png"
+
+"C:\Program Files\ImageMagick-7.0.8-Q16\mogrify.exe" -crop 777x130+0+0 -path "C:\Users\Hao Ran Lee\Downloads\fui_homescreen\framegrabs\pixel_flutter_5\4_recropped" "C:\Users\Hao Ran Lee\Downloads\fui_homescreen\framegrabs\pixel_flutter_5\3_transparent\*.png"
+
+for /f %f in ('dir /b "C:\Users\Hao Ran Lee\Downloads\fui_homescreen\framegrabs\pixel_flutter_5\4_recropped"') do "C:\Program Files\ImageMagick-7.0.8-Q16\convert.exe" -page 788x145+0+0 "C:\Users\Hao Ran Lee\Downloads\fui_homescreen\framegrabs\pixel_flutter_5\musicviz_bkgrd.png" -page +5+7 "C:\Users\Hao Ran Lee\Downloads\fui_homescreen\framegrabs\pixel_flutter_5\4_recropped\%~nf.png" -alpha set -channel RGBA -background none -layers flatten "C:\Users\Hao Ran Lee\Downloads\fui_homescreen\framegrabs\pixel_flutter_5\5_overlay_bkgrd\%~nf.png"
+
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert.exe" -delay 15 "C:\Users\Hao Ran Lee\Downloads\fui_homescreen\framegrabs\pixel_flutter_5\5_overlay_bkgrd\scene_*.png" -loop 0 "C:\Users\Hao Ran Lee\Downloads\fui_homescreen\framegrabs\pixel_flutter_5\pixel_flutter_15.gif"

@@ -1,0 +1,9 @@
+**.mp4
+framegrabs/*/*.bmp
+framegrabs/bing_map_sg/*.gif
+framegrabs/waveform/*.bmp
+framegrabs/waveform/cropped/*.bmp
+framegrabs/pixel_flutter_5/*/*.bmp
+framegrabs/pixel_flutter_5/*/*.png
+framegrabs/screen_record/*/*.png
+framegrabs/screen_record/screen_record_raw.gif
